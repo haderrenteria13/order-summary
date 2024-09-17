@@ -10,28 +10,152 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+    :root {
+      --Pale-blue: hsl(225, 100%, 94%);
+      --Bright-blue: hsl(245, 75%, 52%);
+      --Very-pale-blue: hsl(225, 100%, 98%);
+      --Desaturated-blue: hsl(224, 23%, 55%);--Dark-blue: hsl(223, 47%, 23%);
+      --Font-size-paragraph: 16px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--Pale-blue);
+      font-family: "Red Hat Display", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center; 
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%); 
+    }
+
+    .card {
+      text-align: center;
+      background: var(--Very-pale-blue);
+      border-radius: 15px;
+    }
+
+    .card img {
+      border-radius: 15px 15px 0 0;
+    }
+
+    .card h1 {
+      margin-bottom: 0;
+      color: var(--Dark-blue);
+      font-weight: 900;
+    }
+
+    .card p {
+      color: var(--Desaturated-blue);
+      margin-bottom: 25px;
+    }
+
+    .change-plan {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background: hsl(225, 100%, 98%);
+      margin-bottom: 35px;
+    }
+
+    .change-plan a {
+      font-weight: 700;
+      font-size: var(--Font-size-paragraph);
+      color: var(--Bright-blue);
+    }
+
+    .change-plan a:hover {
+      text-decoration: none;
+      color: var(--Desaturated-blue);
+    }
+
+    .container-plan {
+      display: flex;
+      gap: 20px;
+    }
+
+    .text-plan h2 {
+      font-size: var(--Font-size-paragraph);
+      color: var(--Dark-blue);
+      font-weight: 900;
+      margin: 0;
+    }
+
+    .text-plan p {
+      font-size: var(--Font-size-paragraph);
+      color: var(--Desaturated-blue);
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn {
+      background: var(--Bright-blue);
+      padding: 10px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 10px;
+      width: 350px;
+      -webkit-box-shadow: -4px 22px 251px -35px var(--Bright-blue);
+      -moz-box-shadow: -4px 22px 251px -35px var(--Bright-blue);
+      box-shadow: -4px 22px 251px -35px var(--Bright-blue);
+    }
+
+    .btn:hover {
+      background-color: var(--Desaturated-blue);
+    }
+
+    .cancel-order{
+      color: var(--Desaturated-blue);
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 27px;
+    }
+
+    .cancel-order:hover {
+      color: var(--Dark-blue);
+    }
   </style>
 </head>
 <body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="card">
+    <img src="./images/illustration-hero.svg" alt="Ilustracion-Hero">
+    <div class="card-body">
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs,<br>audiobooks, and podcasts on any 
+        device<br>anywhere you like!</p>
+      <div class="change-plan">
+        <div class="container-plan">
+          <img src="./images/icon-music.svg" alt="Icon-Music">
+          <div class="text-plan">
+            <h2>Annual Plan</h2>
+            <p>$59.99/year</p>
+          </div>
+        </div>
+        <a href="#">Change</a>
+      </div>
+      <div class="btn-group">
+        <a href="#" class="btn ">Proceed to Payment</a>
+        <a href="#" class="cancel-order">Cancel Order</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
